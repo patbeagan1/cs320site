@@ -1,0 +1,174 @@
+CH6 is on function oriented design
+OO design
+
+principles of design
+needs to be correct and verifiable
+complete
+needs to cover everything in the requirements
+
+we should be able to trace designs back to the requirements in every case
+we need to eb efficient about our time
+need to take what the client thinks into account
+
+simple design
+K.I.S.S.
+needs to be understandable at a moment's notice
+need to be cohesive, stop looking at all of the little details
+going back to architecture is extremely important
+there should be a central focus
+
+
+linux kernel
+has very good design
+needs to mesh with the system overall
+code needs to be understandable, since it is something that will potentially be read by a lot of people
+
+semantic duplication is good in terms of design
+abstract out
+
+for the most part, efficiency takes a back seat to good design
+make it work right before making it work fast
+need to be able to prioritize
+
+verifiability and traceability are the most quantifiable
+
+since we are only able to think about about 7 things at a time, we need to partition the problem.
+Partitioning this kind of problem results in modules
+each of these modules should be as independent as possible
+This is not always possible
+
+what we should not have is a module with a lot of interdependencies, so we will have to do less negotiation with other teams.
+hierarchical partitioning - layering
+abstraction - how do we do it in terms of design?
+2 basic ways - functional abstraction, data abstraction
+func - divide up the vaious functions that the module is responsible for
+data - leads into OO programming
+	data values can also have behavior
+
+thinking in terms of records, with types of complex data
+	if we pass a record to a function, it will be able to modify it - functional programming
+
+complex numbers example
+data abstraction - new type with an associated set of behaviors
+
+triangulation example
+functional abstraction - need to have locations, will be able to return location
+
+Java is anti-functional programming
+
+Ways to go about design
+top down and bottom up
+top down - start with the system as a whole and break it into associated modules
+	recursively partition it until we get to something small enough to actually implement
+bottom up - start with the smallest parts of the application and build it into something which is large enough to fulfill the reqs
+	creating libraries first
+	build on top of the libraries until we are able to create the whole applicaiton
+
+best way to go about it is to plan top down, then build bottom up
+
+enzian strategy - top down and bottom up
+problem, they have to join in the middle
+
+defining a programming language which is specific to the domain
+	can be a very valuable technique
+	think sieve in roundcube
+
+moving towards independence through coupling
+loose coupling is obviously better
+interdependencies between modules are the norm unless they are designed for a commpletely generic system
+how complex are the interfaces between 2 parts of the system
+
+simple interfaces are simple to build onto
+"use of internals"
+	does the module make use of internal details of another module	
+	this makes things very interdependent
+	makes for very tight coupling
+	windows - use of undocumented functions, internal code instead of the defined interface
+		functions would suddenly be missing or do things differently
+		originally to make things faster
+		eventually had to make a seperate layer of compatibility to deal with these programmers
+compatibility issues
+
+type of communication between modules is also important
+data should be moving in between different modules
+	control modification
+	sending data which will affect the way that another module works
+
+needs to be high cohesion within a module
+needs to be about things which are very strongly related
+
+should be that looking at one modules will not imply anything about the other modules
+
+7 levels of cohesion
+coincidental
+	lowest pssible level of cohesion
+	all in the module together by coincidence
+	salvation army
+logical
+	all elements are logically related
+temporal
+	all the elements of the module are things which happen at the same time
+	eg the initialization module
+	all the init processes happen at the same time
+procedural
+	the various procedures use each other a lot
+communicational
+	all the elements will be using the same data
+sequential
+	all the elements are going to be done sequentially
+functional
+	everything in the module is associated witha single function
+	they will all do different aspects of the same thing
+
+to find out which level you are dealing withm, write a one sentence description of what the module does
+if the sentence is compounded, it will be a lower level of cohesion
+	
+if the sentence has words like first, last, next, temporal or sequential
+init or cleanup, temporal cohesion
+
+if the sentence has subjects, verbs, objects, if the object is singular, then it is a case of logical cohesion
+
+functional cohesion
+	takes the given data and displays a map
+	
+each module should have a well defined, single purpose
+
+
+object oriented design
+	involves data center design
+	identifying the associations among the objects
+	have to be related in some way
+
+best to show that there are relationships between different objects, but don't list all of them until the implementation stage
+high level design
+possible that people can change the low level desicions later, need to make the relationships which will be constant
+	 not depending on implementation
+
+objects
+guidelines on designing classes
+	should not include any data definitions
+	public and private interfaces
+	should not have any of the internal data exposed
+	no internal use
+	one module should not be calling methods in another module unless it is part of the public interface
+	easy in java, can just say that a method is either public or private
+
+Every operation that a class exposes should be exposing or modifying data, operations should show high cohesion as well
+if there is a circular dependency, eg class a calls methods in class b and vice versa, we should rethink the design
+there should be explicit interactions between the 2 with no cycles
+
+Don't use global variables if at all possible
+can have it change randomly if it is used by a different class
+
+subclasses and subtyping
+	subclassing: rectangles and squares - square has one parameter, rectangle has 2, square could be the subclass of rectangle
+	subtyping: rectangles and squares - has all of the original properties plus its own
+	only use subclassing in an isa relationship
+	eg student is not a goot subclass of student, because they can stop being a student without stopping being a person
+inheritance hierarchy
+	should be a natural hierarchy
+	having someother class a a superclass, it should be a direct, permanent link
+
+	subclassing to share code is not ok, there are better ways to do that
+	we should almost never be separating by type, polymorphism is better
+	

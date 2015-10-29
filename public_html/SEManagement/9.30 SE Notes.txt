@@ -1,0 +1,86 @@
+Testing:
+  checking for errors
+  error: difference between observed and required behavior
+
+Errors occur because of failures
+Failures: the cause of an error
+Fault(big error): the reason for a failure
+
+Testing cannot prove that a program has not bugs, it can only show the errors which are there.
+
+test oracle
+  Given this input, this is the correct output
+  
+Test cases
+Test criterion - 100% of all statements in the program are executed
+  Reliability - all the test cases that satisfy the criterion find the same set of errors
+  Validity - for all faults there exists a set of test cases satisfying the criterion which will expose that fault
+  
+We need to make sure that every possible fault is being tested by one of the test cases
+
+Someone other than the author should test the code
+  They need to be willing to break it however they can
+
+Blackbox vs. Whitebox testing
+
+Equivalence classes
+  input
+    eg testing an abs val function
+    neg, pos, 0
+    run a test on every equ class
+  output
+    neg, pos, 0
+    test to make sure that the output is always correct as well
+
+Boundary value analysis
+  Working with an array structure
+  eg 0,1,2,3 using indices 0 to n-1
+  try the values -1, 0, n-1, n
+  tests both sides of the boundary
+
+Unit testing
+  Testing which involves a small piece of the system
+  Test all of the capabilities of a class or function
+  
+Integration testing
+  Testing problems in the design
+
+System testing
+  Testing problems in the reqs
+
+Acceptance testing
+  Allows the client to make sure the system runs how it is supposed to.
+--------------------------------------------------------------------
+v Client needs    |  Acceptance Testing ------> | v Delivery
+v Requirements    |^ System Testing             | v Maintenance
+v Design          |^ Integration Testing
+v Implementation  |^ Unit Testing
+  Testing-------> |^
+--------------------------------------------------------------------
+
+Test plan
+  Implementation
+    Test unit specifications
+    System level
+    Set of modules
+    A module
+  Features
+    Refers to particular reqs in the req documents
+    Each use case needs testing
+  Approach
+    How are we going to test these things?
+  Deliverables
+    Output from test runs
+    A list of all the test cases
+    A list of all the defects found
+    Summary
+    Scope - how much of the code was actually tested
+  Schedule
+  Task Allocation
+
+Test case specs:
+  All test cases with inputs and expected behavior
+  Need to specify what all the test cases test
+  
+Regression testing:
+  Need to make a test suite which can be run regularly to make sure that new features do not break old ones.

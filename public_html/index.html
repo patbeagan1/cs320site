@@ -77,7 +77,7 @@
 
 <!--JS=START======================================================-->
 <script>
-        var collapseholder = ["collapse0","collapseunix", "collapsecalendar", "collapsegithub", "collapseteam"];
+        var collapseholder = ["collapse0","collapseunix", "collapsecalendar", "collapsegithub", "collapseteam", "collapsenotes"];
         function toggleMe(a){
                 var e=document.getElementById(a);
                 if(!e) return true;
@@ -125,6 +125,8 @@
 <input type="button" onclick="return toggleMe('collapseteam')" value="Team Info">
 <input type="button" onclick="return toggleMe('collapsegithub')" value="Github Help">
 <input type="button" onclick="return toggleMe('collapseunix')" value="Unix&#x00A;Commands">
+<input type="button" onclick="return toggleMe('collapsenotes')" value="Notes">
+
 </pre></div>
 
 	<h3>Class Resources</h3>
@@ -186,7 +188,7 @@ Please send me your github information over slack so I can add you to the repo
   <tr><td>git clone link/to/a/repository.git</td>
 <td>Git clone is one of the two commands which will start a new repository. Git clone will copy the contents of the git file contained at the link location into your current directory. It will also create a (.git) folder, which is hidden and contains all of your commits, the location of your master repository, and git settings.</td></tr>
 
-<tr></tr><td>git init</td>
+<tr><td>git init</td>
 <td>Git init is the second command which will start a new repository. It does not pull from an online location; instead, it creates the (.git) folder, which holds all of the git data for the folder.</td></tr>
 
 <tr><td>git status</td>
@@ -393,6 +395,14 @@ If the branches have already diverged, git will recursively backtrack until it h
 </iframe>
 </collapse>
 <!--Calendar END===========================================================-->
+    
+<!--Calendar START===========================================================-->
+<collapse id="collapsenotes">
+    <h1>Class Notes</h1>
+    <a href="./SEManagement/SENotes3.txt">Notes 3</a>
+</collapse>
+<!--Calendar END===========================================================-->
+        
 
 <!--Unix Commands=START=====================================================-->
 <collapse id="collapseunix">

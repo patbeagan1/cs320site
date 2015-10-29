@@ -1,0 +1,65 @@
+Design documentation
+
+    Tablet
+        data entry forms
+        data entry gis
+        auth
+        delayed upload
+            synchronization researching
+        printing    
+            printing libraries
+        search and report
+        Operating system
+            **Android, iOS, both
+            platform
+            
+    Desktop app
+        Operating system
+            **Mac, windows
+        Implementation
+            Possible platforms
+                Java application
+                Node.js as a WebApp
+    
+    Database
+        platform
+        style
+                
+Researching tools and frameworks
+Breaking into modules
+Start defining interfaces
+
+Red Team
+    Representing database information on static/dynamic map
+    Maps for mobile web apps
+    Syncing to database
+    Data entry in java
+  
+Orange
+    Secure login
+    Database design
+    Databses in general
+    
+Green
+    Frameworks
+    
+Blue
+    GIS - what it is and how to implement
+    Secure login
+    
+Replicating the DB on the tablet
+
+Scaling
+    can the entire db fit on the tablet
+    
+
+***put into the table on the site, contact people for the other groups***
+   ionic
+    
+    
+    
+    
+    
+    
+    
+    

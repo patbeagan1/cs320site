@@ -1,0 +1,33 @@
+Architectural view
+
+Decompose the problem
+	Which modules do we need?
+	Interdependencies between the modules?
+	Interfaces between the different modules
+
+	Libraries
+		Layers which we can build on top of 
+		They have a well-defined interface
+
+	Designing an interface between projects
+	
+Architecture of an alarm clock
+	Electronic display
+	Alarm
+	Input controls
+		Snooze button
+		Set alarm on/off
+		Set alarm time
+		Set time
+		Set volume
+		
+Alarm clock software
+	Time
+	Input
+	Display
+	Sound
+	Storage
+	
+What services do each of these modules need to offer
+	Adapter pattern
+
