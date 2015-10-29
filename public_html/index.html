@@ -120,12 +120,12 @@
 <div id="sidebar" style="text-align:center">
 
 <div class="headline"><pre>
-<input type="button" onclick="return toggleMe('collapse0')" value="Main Page">
-<input type="button" onclick="return toggleMe('collapsecalendar')" value="Calendar">
-<input type="button" onclick="return toggleMe('collapseteam')" value="Team Info">
-<input type="button" onclick="return toggleMe('collapsegithub')" value="Github Help">
-<input type="button" onclick="return toggleMe('collapseunix')" value="Unix&#x00A;Commands">
-<input type="button" onclick="return toggleMe('collapsenotes')" value="Notes">
+<input type="button" onclick="return toggleMe('collapse0')"         value="Main Page">
+<input type="button" onclick="return toggleMe('collapsecalendar')"  value="Calendar">
+<input type="button" onclick="return toggleMe('collapseteam')"      value="Team Info">
+<input type="button" onclick="return toggleMe('collapsegithub')"    value="Github Help">
+<input type="button" onclick="return toggleMe('collapseunix')"      value="Unix&#x00A;Commands">
+<input type="button" onclick="return toggleMe('collapsenotes')"     value="Class Notes">
 
 </pre></div>
 
@@ -279,10 +279,11 @@ If the branches have already diverged, git will recursively backtrack until it h
 
 <br><br>Generally, when there are merge conflicts, it means that more than one person has edited the exact same line of code. Git will attempt to merge the line, realize that it doesn't know what it should keep, then include both lines in the documents in question, for the programmer to go in and change manually. When a git merge fails, run git status to see which files have failed to merge, then open up those files for editing. You should see blocks of code formatted similarly to this:
 
-<br><br><<<<<<< HEAD:index.html
-<div id="footer">contact : email.support@github.com</div>
+<br><br>
+<<<<<<< HEAD:index.html
+<div id="foo">contact : email.support@github.com</div>
 =======
-<div id="footer">
+<div id="foo">
  please contact us at support@github.com
 </div>
 >>>>>>> iss53:index.html
@@ -399,7 +400,7 @@ If the branches have already diverged, git will recursively backtrack until it h
 <!--Calendar START===========================================================-->
 <collapse id="collapsenotes">
     <h1>Class Notes</h1>
-<!--    <a href="./SEManagement/SENotes3.txt">Notes 3</a>-->
+    <a href="./cs320site/public_html/SEManagement/SENotes3.txt">Notes 3</a>-->
 </collapse>
 <!--Calendar END===========================================================-->
         
