@@ -70,3 +70,42 @@ When writing code, this should be the thought process
     figured out what the external user should be able to do with those methods
         setters need to be more exacting, eg withdraw() and deposit()
         
+        
+High level design
+    We do not need to reference anything ther than what would be in the public interface
+    Attributes should be of an interface type, not a class type.
+    Keep attributes as general as possible, you should not specify anything unless needed
+    
+recognize similar behavior and seperate it out
+
+Low level design in the design document
+    we need to have interfaces for all classes
+    public and private methods, attributes
+        state the types defined
+        can be condensed into UML
+        describe and justify the choice of data structures
+        eg
+            if you use a tree map instead of a hash map, you need to be able to state your rationale
+            describe any interesting algorithms which you are expecting to use
+            provide the inheritance relationship
+        
+Need to avoid things like how we are implementing the relationship between 2 classes
+    just say that there is a relationship
+    
+Low level design
+    need to work through the process until we get it right
+    consider all of the alternatives
+    
+    when the choice is not clear, but the outcome is important,
+        you may want to pursue both options simultaneously
+        if there is no time to make a prototype of both, kludge and choose one
+    
+    data structure and algorithm design
+        
+High level design
+    building a set of APIs
+        low level design - how can we provide everything that we promised in the API
+    isolate as many low-level decisions as possibel so it is easy to make changes
+        if we assume that we are going to get things wrong, we will code cautiously and be able to roll back later
+        
+    
