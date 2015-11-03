@@ -1,65 +1,58 @@
-Design documentation
+SENotes12
 
-    Tablet
-        data entry forms
-        data entry gis
-        auth
-        delayed upload
-            synchronization researching
-        printing    
-            printing libraries
-        search and report
-        Operating system
-            **Android, iOS, both
-            platform
+be careful of the difference between subtyping and inheritance
+eg
+    squares and rectanges
+        squares are a subtype of rectange, because every square is a rectangle
+        rectangles are a subclass of square, because it includes an extra parameter
+        
+    Everything which is in a subclassing relationship has to have the is-a relationship hold
+    _____
+    | A |   Subclassing
+    |___|   B is able to masquerade as an A
+      ^
+      |     Subclasses should always hold
+    _____
+    | B |
+    |___|
+    
+    __________
+    | Person |   Subclassing
+    |________|   This is a bad example of subclassing
+        ^
+        |        A person can become a student and stop being a student without stopping being a person
+    ___________  Temporal persistence matters
+    | Student |  A better schema would be to have people who have a relationship with a school - removing relationships is much easier
+    |_________|     than removing attributes 
+    
+    
+       __________
+       | Person |   Subclassing
+       |________|   This is a reasonable example of inheritance, 
+         ^    ^         made as a compromise to allow a TA into the system
+         |    |         he can stop being a student or a teacher, while still retaining his other properties.
+___________  ___________  
+| Student |  | Teacher |  
+|_________|  |_________|     
+         ^    ^
+         |    |
+       __________
+       |   TA   |  
+       |________|  
+       
+       
+       public interface of a class should only contain the set of services which the class is able to export
+            no private interfaces should be included
+
+Classes should not send components of themselves through to other classes
+    eg
+        Map class in java
+            contains an internal class called "entry"
+            this class can be accessed in many ways by other modules
             
-    Desktop app
-        Operating system
-            **Mac, windows
-        Implementation
-            Possible platforms
-                Java application
-                Node.js as a WebApp
-    
-    Database
-        platform
-        style
-                
-Researching tools and frameworks
-Breaking into modules
-Start defining interfaces
-
-Red Team
-    Representing database information on static/dynamic map
-    Maps for mobile web apps
-    Syncing to database
-    Data entry in java
-  
-Orange
-    Secure login
-    Database design
-    Databses in general
-    
-Green
-    Frameworks
-    
-Blue
-    GIS - what it is and how to implement
-    Secure login
-    
-Replicating the DB on the tablet
-
-Scaling
-    can the entire db fit on the tablet
-    
-
-***put into the table on the site, contact people for the other groups***
-   ionic
-    
-    
-    
-    
-    
-    
-    
-    
+Chaining is indicative of bad code
+    eg
+        a.getB().getC().getD();
+        
+Avoid static wherever possible, keep things scoped correctly
+    static will allow anything everywhere else to be able to access that element

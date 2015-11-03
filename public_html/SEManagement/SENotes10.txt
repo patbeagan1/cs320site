@@ -1,99 +1,65 @@
-Presentations
+Design documentation
 
-Effective presentations
-	Read the doc
-	Keep the talk within the allotted time:	10 mins
-	Includes setup time
-		Each person has to be able to present for 3 minutes
-	***send in a list of the people who are going to be presenting tomorrow***
+    Tablet
+        data entry forms
+        data entry gis
+        auth
+        delayed upload
+            synchronization researching
+        printing    
+            printing libraries
+        search and report
+        Operating system
+            **Android, iOS, both
+            platform
+            
+    Desktop app
+        Operating system
+            **Mac, windows
+        Implementation
+            Possible platforms
+                Java application
+                Node.js as a WebApp
+    
+    Database
+        platform
+        style
+                
+Researching tools and frameworks
+Breaking into modules
+Start defining interfaces
 
-	powerpoint
-		Limit the number of slides
-		2-3 slides per person
-		time check
-			practice, timing
-			need to be able to go overtime, limit pacing
-		
-		Big fonts, prompts, need improv
-		Visuals - only if really useful
-		Sentence fragments and bullets
-		No transitions
-		
-		Edward Tufte - the visual display of quantitative information
-		
-		keep the talk focused
-		clarity and volume, enunciation
-			pauses after really important points
-		eye contact
-		Don't read the talk verbatim
-		Can have a cheat sheet which is held
-			reading a talk is not engaging, no one will be able to learn the material
-			cheat sheets should also be bullets
-		
-		Need to be an expert on the material
-		FLOW - topics need to segue into each other
-		
-		***print out the pdf on the effective SRS presentation***
+Red Team
+    Representing database information on static/dynamic map
+    Maps for mobile web apps
+    Syncing to database
+    Data entry in java
+  
+Orange
+    Secure login
+    Database design
+    Databses in general
+    
+Green
+    Frameworks
+    
+Blue
+    GIS - what it is and how to implement
+    Secure login
+    
+Replicating the DB on the tablet
 
-		Evaluation form
-			4 scale, 4 is high
+Scaling
+    can the entire db fit on the tablet
+    
 
-Intro       |30   |X    |29
-1           |109  |127  |203
-2           |X    |210  |X
-3           |X    |56   |255
-conclusion  |X    |20   |316
-
-
-			Team Based
-			--------------------------------------------------------------------------------
-	4	4	Organization 		  |is the presentation well organized/in a logical order?
-	4	4	Introduction		  |is there an introduction? is it attention-getting?
-	4	4	Accuracy		      |is all of the information consistent and correct? is it rele
-	4	4	Relevance		      |is all of the information related to the topic?
-		3	Conclusion		    |does it exist, is it complete
-	4	4	Cohesion		      |do we stay on a topic
-		3	Cohesion among presentators| do all of the presenters perform with flow
-		3	Completion		    |did we do everything
-		4	Comprehensibility |how easy is the presentation to understand
-    33/36
-			
-			Individual Based
-			--------------------------------------------------------------------------------
-	4	343	Subject knowledge	|are they on board
-	4	334	Eye contact		    |how much eye contact did they achieve
-	43	434	Elocution		      |how understandable were they
-	4	433	Flow(team)		    |
-	4	423	Body language		  |how are they moving
-	4	423	Poise		  	      |how are they holding themselves - confidence
-	4	323	Enthusiasm		    |how much do they want the presentation to succeed
-	4	333	Visual Aids		    |how much do they help the overall presentation
-	4	444	Mechanics		      |grammar and overall presentation style
-    32/36 28/36 30/36
-	
-		Team order: Blue, Orange, Red, Green
-		
-		Need to go through all of the reqs, so we can verify with the customer that all of the reqs are accurate
-		This is our chance to interface with the customer
-		Verification for use cases, not walking through each
-			Read out the list of use cases in general
-				
-			Format
-			Intro - all 3
-			Entry - Frank
-			Mapping - Alex
-			Printing - Mike V
-			Conclusion - all 3
-
-			We will be able to get feedback on the spot and later
-			
-			SDS
-			g1 aaron
-			g2 yuchen
-			g3 mike ZT
-
-			Final
-      g1 Jake, Ben
-      g2 Nate
-      g3 James
-			
+***put into the table on the site, contact people for the other groups***
+   ionic
+    
+    
+    
+    
+    
+    
+    
+    
