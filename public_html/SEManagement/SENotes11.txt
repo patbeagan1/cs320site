@@ -1,4 +1,4 @@
-SENotes12
+SENotes11
 
 be careful of the difference between subtyping and inheritance
 eg
@@ -56,3 +56,17 @@ Chaining is indicative of bad code
         
 Avoid static wherever possible, keep things scoped correctly
     static will allow anything everywhere else to be able to access that element
+    
+    
+methods should be small
+large methods should be composed of smaller methods
+
+rule of 3s
+    if code is repeated more than 3 times, pull it out into a different method
+    
+When writing code, this should be the thought process
+    create attributes
+    write getters
+    figured out what the external user should be able to do with those methods
+        setters need to be more exacting, eg withdraw() and deposit()
+        
