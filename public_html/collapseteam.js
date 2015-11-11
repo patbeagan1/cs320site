@@ -1,6 +1,4 @@
 document.write('\
-<collapse id="collapseteam">\
-\
 <h1>Team Meetings</h1>\
         <p>\
         Team meetings will be held as needed - they will appear on the calendar when we decide to meet.\
