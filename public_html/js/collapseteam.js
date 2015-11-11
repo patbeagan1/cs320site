@@ -91,7 +91,7 @@ document.write('\
                 <td>Adam<br>Noel</td>\
                 </tr>\
         <tr>\
-        <td><h3>Contact person</h3></td>\
+        <td><h3>Contact<br>person</h3></td>\
         <td>Callum</td>\
         <td></td>\
         <td></td>\
