@@ -131,15 +131,7 @@
 
 </pre></div>
 
-  <script>
-    var link = document.querySelector('link[rel="import"]');
-    var content = link.import;
 
-    // Grab DOM from warning.html's document.
-    var el = content.querySelector('.warning');
-
-    document.body.appendChild(el.cloneNode(true));
-  </script>
 	<h3>Class Resources</h3>
         <a href="https://moodle.umass.edu/course/view.php?id=24900">320 Moodle</a><br>
         <a href="http://people.cs.umass.edu/~ridgway/">Class Site</a><br>
@@ -180,6 +172,15 @@ We will be having a team meeting next Tuesday to finalize the SRS.
 <li>
 Please send me your github information over slack so I can add you to the repo
 </li>
+  <script>
+    var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+
+    // Grab DOM from warning.html's document.
+    var el = content.querySelector('.warning');
+
+    document.body.appendChild(el.cloneNode(true));
+  </script>
 </p>
 </collapse>
 <!--Main Page END===========================================================-->
