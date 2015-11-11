@@ -2,201 +2,180 @@
 <html>
 
 <head>
-<style>
-
-        table{ width: auto; empty-cells: hide; }
-        h1,h2,h3,h4,h5,h6{
-                margin-top: 0px;
-                margin-bottom: 0px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                }
-        td { text-align:center; padding:3px;}
-        .container {
-                position:relative; padding:0 0 0 0px;
-                overflow: hidden;
-                }
-        #sidebar {
-                float:left;
-                height:auto !important;
-                height:100%;
-                width:120px;
-                position:absolute;
-                background:#aab;
-//              margin-bottom: auto;
-//              padding-bottom: 5000px;
-//              height:5000px;
-//              overflow:hidden;
-//              width:150px;
-//              margin: 0 5000 20 0;
-//              position:absolute;
-                }
-        #header {
-                height:50px;
-                width:auto;
-                margin: 0 0 5px 0;
-                background:#522;
-                border:1px solid #000;
-                }
-        #content {
-                height:auto;
-                width:auto;
-                margin: 0 50px 0 160px;
-                position:absolute; }
-        #footer {
-                height:20px;
-                width:100%;
-                margin: 5px 0 0 0;
-                border:1px solid #000;
-                }
-
-        pre {
-                font-family: Consolas, Arial, Helvetica, sans-serif;
-                white-space: pre-wrap;
-                }
-        p {
-                width:auto;
-                word-wrap: break-word;
-                display: block;
-                margin-top: 0em;
-                margin-bottom: 0em;
-                margin-left: 0;
-                margin-right: 0;
-                }
-        .headline h1, .headline input {
-                display: inline;
-                vertical-align: middle;
-                }
-        input { width:90%; }
-        collapse { display:none }
-	table.center {
-	    margin-left:auto;
-	    margin-right:auto;
-	}
-</style>
-
-<!--JS=START======================================================-->
-<script>
-        var collapseholder = ["collapse0","collapseunix", "collapsecalendar", "collapsegithub", "collapseteam", "collapsenotes"];
-        function toggleMe(a){
-                var e=document.getElementById(a);
-                if(!e) return true;
-                for(var i=0; i<collapseholder.length; i++){
-                        document.getElementById(collapseholder[i]).style.display="none";
-                }
-                e.style.display="block";
-                return true;
-        }
-        function startTime() {
-                var today=new Date();
-                var h=today.getHours();
-                h=h%12;
-                var m=today.getMinutes();
-                var s=today.getSeconds();
-                m = checkTime(m);
-                s = checkTime(s);
-                document.getElementById('time').innerHTML = h+":"+m+":"+s;
-        }
-        function checkTime(i) {
-                if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
-                return i;
-        }
-        function start(){
-                startTime();
-        }
-</script>
-<!--JS=END======================================================-->
-<!-- Links -->
+  
   <link rel="import" href="warning.html">
   <link rel="import" href="collapsenotes.html">
   
+  
+  <style>
+  
+          table{ width: auto; empty-cells: hide; }
+          h1,h2,h3,h4,h5,h6{
+                  margin-top: 0px;
+                  margin-bottom: 0px;
+                  padding-top: 5px;
+                  padding-bottom: 5px;
+                  }
+          td { text-align:center; padding:3px;}
+          .container {
+                  position:relative; padding:0 0 0 0px;
+                  overflow: hidden;
+                  }
+          #sidebar {
+                  float:left;
+                  height:auto !important;
+                  height:100%;
+                  width:120px;
+                  position:absolute;
+                  background:#aab;
+  //              margin-bottom: auto;
+  //              padding-bottom: 5000px;
+  //              height:5000px;
+  //              overflow:hidden;
+  //              width:150px;
+  //              margin: 0 5000 20 0;
+  //              position:absolute;
+                  }
+          #header {
+                  height:50px;
+                  width:auto;
+                  margin: 0 0 5px 0;
+                  background:#522;
+                  border:1px solid #000;
+                  }
+          #content {
+                  height:auto;
+                  width:auto;
+                  margin: 0 50px 0 160px;
+                  position:absolute; }
+          #footer {
+                  height:20px;
+                  width:100%;
+                  margin: 5px 0 0 0;
+                  border:1px solid #000;
+                  }
+  
+          pre {
+                  font-family: Consolas, Arial, Helvetica, sans-serif;
+                  white-space: pre-wrap;
+                  }
+          p {
+                  width:auto;
+                  word-wrap: break-word;
+                  display: block;
+                  margin-top: 0em;
+                  margin-bottom: 0em;
+                  margin-left: 0;
+                  margin-right: 0;
+                  }
+          .headline h1, .headline input {
+                  display: inline;
+                  vertical-align: middle;
+                  }
+          input { width:90%; }
+          collapse { display:none }
+  	table.center {
+  	    margin-left:auto;
+  	    margin-right:auto;
+  	}
+  </style>
+  
+  <!--JS=START======================================================-->
+  <script>
+          var collapseholder = ["collapse0","collapseunix", "collapsecalendar", "collapsegithub", "collapseteam", "collapsenotes"];
+          function toggleMe(a){
+                  var e=document.getElementById(a);
+                  if(!e) return true;
+                  for(var i=0; i<collapseholder.length; i++){
+                          document.getElementById(collapseholder[i]).style.display="none";
+                  }
+                  e.style.display="block";
+                  return true;
+          }
+          function startTime() {
+                  var today=new Date();
+                  var h=today.getHours();
+                  h=h%12;
+                  var m=today.getMinutes();
+                  var s=today.getSeconds();
+                  m = checkTime(m);
+                  s = checkTime(s);
+                  document.getElementById('time').innerHTML = h+":"+m+":"+s;
+          }
+          function checkTime(i) {
+                  if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+                  return i;
+          }
+          function start(){
+                  startTime();
+          }
+  </script>
 </head>
 
 <body onload="start()" background="http://utsavananda.com/wp-content/uploads/2014/06/textured-paper-background-tile-with-bluish-tint.jpg">
-
-<!--HEADER=START======================================================-->
-<div id="header" style="color:#bbb;">
-<p>Welcome! You arrived at: <div id="time"></div></p></div>
-<!--HEADER=END======================================================-->
-
-<!--SIDEBAR=START======================================================-->
-<div id="sidebar" style="text-align:center">
-
-<div class="headline"><pre>
-<input type="button" onclick="return toggleMe('collapse0')"         value="Main Page">
-<input type="button" onclick="return toggleMe('collapsecalendar')"  value="Calendar">
-<input type="button" onclick="return toggleMe('collapseteam')"      value="Team Info">
-<input type="button" onclick="return toggleMe('collapsegithub')"    value="Github Help">
-<input type="button" onclick="return toggleMe('collapseunix')"      value="Unix&#x00A;Commands">
-<input type="button" onclick="return toggleMe('collapsenotes')"     value="Class Notes">
-
-</pre></div>
-
-
-	<h3>Class Resources</h3>
-        <a href="https://moodle.umass.edu/course/view.php?id=24900">320 Moodle</a><br>
-        <a href="http://people.cs.umass.edu/~ridgway/">Class Site</a><br>
-	<a href="https://ipeer.umass.edu/home">IPeer</a><br>
-	<br>
-	<h3>Team Resources</h3>
-	<a href="https://trello.com/b/o1QakubK/cs-320">Trello</a><br>
-        <a href="https://drive.google.com/drive/u/1/folders/0B2IKxYZWSfSdU1F3d0JjejJMRU0">Drive</a><br>
-        <a href="https://github.com/CS320Red">Github</a><br>
-        <a href="http://wingsoveramherst.com/zgrid/proc/site/sitep.jsp">Wings</a><br>
-
-	<br>
-	<h3>Slack</h3>
-        <a href="https://cs320red.slack.com/messages/general/">Red Team Slack</a><br>
-        <a href="https://320superslack.slack.com/messages/general/">Class Slack</a><br>
-
-        <br>
-</div>
-<!--SIDEBAR=END======================================================-->
-
-
-<!--CONTENT=START======================================================-->
-<div id="content"> <!--starts the content div-->
-
-<!--Main Page START===========================================================-->
-<br>
-<collapse id="collapse0" style="display:block">
-<h1>Welcome!</h1>
-<p>You've reached the webpage for CS320 Red Team. Feel free to browse through the links on the left.</p>
-<br>
-<hr>
-<br>
-<h1>News</h1>
-<p>
-<li>
-We will be having a team meeting next Tuesday to finalize the SRS.
-</li>
-<li>
-Please send me your github information over slack so I can add you to the repo
-</li>
-</p>
-</collapse>
-<!--Main Page END===========================================================-->
-
-<collapse id="collapsegithub"><script src="collapsegithub.js"></script></collapse>
-<collapse id="collapsenotes"><script src="collapsenotes.js"></script></collapse>
-<collapse id="collapseteam"><script src="collapseteam.js"></script></collapse>
-<collapse id="collapsecalendar">
-<iframe
-	src="https://www.google.com/calendar/embed?src=umass.edu_tna5thvtv9pmq9qeuibtkp1ros%40group.calendar.google.com&ctz=America/New_York"
-	style="border: 0"
-	width="1000"
-	height="600"
-	frameborder="0"
-	scrolling="no">
-</iframe>
-</collapse>
-<collapse id="collapseunix"><script src="collapseunix.js"></script></collapse>
-<!--UNIX COMMANDS=END======================================================-->
-
-</div> <!--ends the content div-->
-<!--CONTENT=END======================================================-->
-
-</div>
+  
+  <!--=========================================================-->
+  <div id="header" style="color:#bbb;">
+    <p>Welcome! You arrived at: <div id="time"></div></p>
+  </div>
+  
+  <!--=========================================================-->
+  <div id="sidebar" style="text-align:center">
+    <div class="headline">
+      <pre>
+        <input type="button" onclick="return toggleMe('collapse0')"         value="Main Page">
+        <input type="button" onclick="return toggleMe('collapsecalendar')"  value="Calendar">
+        <input type="button" onclick="return toggleMe('collapseteam')"      value="Team Info">
+        <input type="button" onclick="return toggleMe('collapsegithub')"    value="Github Help">
+        <input type="button" onclick="return toggleMe('collapseunix')"      value="Unix&#x00A;Commands">
+        <input type="button" onclick="return toggleMe('collapsenotes')"     value="Class Notes">
+      </pre>
+    </div>
+    
+  <h3>Class Resources</h3>
+    <a href="https://moodle.umass.edu/course/view.php?id=24900">320 Moodle</a><br>
+    <a href="http://people.cs.umass.edu/~ridgway/">Class Site</a><br>
+    <a href="https://ipeer.umass.edu/home">IPeer</a><br>
+    <br>
+  <h3>Team Resources</h3>
+    <a href="https://trello.com/b/o1QakubK/cs-320">Trello</a><br>
+    <a href="https://drive.google.com/drive/u/1/folders/0B2IKxYZWSfSdU1F3d0JjejJMRU0">Drive</a><br>
+    <a href="https://github.com/CS320Red">Github</a><br>
+    <a href="http://wingsoveramherst.com/zgrid/proc/site/sitep.jsp">Wings</a><br>
+    <br>
+  <h3>Slack</h3>
+    <a href="https://cs320red.slack.com/messages/general/">Red Team Slack</a><br>
+    <a href="https://320superslack.slack.com/messages/general/">Class Slack</a><br>
+    <br>
+  </div>
+  
+  <!--=========================================================-->
+  <div id="content">
+  <br>
+    <collapse id="collapse0" style="display:block">
+      <h1>Welcome!</h1>
+      <p>You've reached the webpage for CS320 Red Team. Feel free to browse through the links on the left.</p>
+      <br><hr><br>
+      <h1>News</h1>
+      <p>
+        <li>We will be having a team meeting next Tuesday to finalize the SRS.</li>
+        <li>Please send me your github information over slack so I can add you to the repo</li>
+    </collapse>
+    <collapse id="collapsegithub"><script src="collapsegithub.js"></script></collapse>
+    <collapse id="collapsenotes"><script src="collapsenotes.js"></script></collapse>
+    <collapse id="collapseteam"><script src="collapseteam.js"></script></collapse>
+    <collapse id="collapseunix"><script src="collapseunix.js"></script></collapse>
+    <collapse id="collapsecalendar">
+      <iframe
+      	src="https://www.google.com/calendar/embed?src=umass.edu_tna5thvtv9pmq9qeuibtkp1ros%40group.calendar.google.com&ctz=America/New_York"
+      	style="border: 0"
+      	width="1000"
+      	height="600"
+      	frameborder="0"
+      	scrolling="no">
+      </iframe>
+    </collapse>
+  </div>
 </body>
 
 <!------------------------
