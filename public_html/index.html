@@ -3,9 +3,10 @@
 
 <head>
   
+  <!--
   <link rel="import" href="warning.html">
   <link rel="import" href="collapsenotes.html">
-  
+  -->
   
   <style>
   
@@ -122,14 +123,14 @@
   <!--=========================================================-->
   <div id="sidebar" style="text-align:center">
     <div class="headline">
-      <pre>
+      <!--pre-->
         <input type="button" onclick="return toggleMe('collapse0')"         value="Main Page">
         <input type="button" onclick="return toggleMe('collapsecalendar')"  value="Calendar">
         <input type="button" onclick="return toggleMe('collapseteam')"      value="Team Info">
         <input type="button" onclick="return toggleMe('collapsegithub')"    value="Github Help">
         <input type="button" onclick="return toggleMe('collapseunix')"      value="Unix&#x00A;Commands">
         <input type="button" onclick="return toggleMe('collapsenotes')"     value="Class Notes">
-      </pre>
+      <!--/pre-->
     </div>
     
   <h3>Class Resources</h3>
@@ -151,7 +152,7 @@
   
   <!--=========================================================-->
   <div id="content">
-  <br>
+    <br>
     <collapse id="collapse0" style="display:block">
       <h1>Welcome!</h1>
       <p>You've reached the webpage for CS320 Red Team. Feel free to browse through the links on the left.</p>
