@@ -108,4 +108,6 @@ High level design
     isolate as many low-level decisions as possibel so it is easy to make changes
         if we assume that we are going to get things wrong, we will code cautiously and be able to roll back later
         
+refactoring
+    improving an existing structure by taking out redundancy, cleaning things up
     
