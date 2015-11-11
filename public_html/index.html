@@ -117,7 +117,22 @@
   
   <!--=========================================================-->
   <div id="header" style="color:#bbb;">
-    <p>Welcome! You arrived at: <div id="time"></div></p>
+    <p>Welcome! You arrived at: <div id="time"></div>
+    <span>
+        <!--=========================================================-->
+      <div id="sidebar" style="text-align:center">
+        <div class="headline">
+          <!--pre-->
+            <input type="button" onclick="return toggleMe('collapse0')"         value="Main Page">
+            <input type="button" onclick="return toggleMe('collapsecalendar')"  value="Calendar">
+            <input type="button" onclick="return toggleMe('collapseteam')"      value="Team Info">
+            <input type="button" onclick="return toggleMe('collapsegithub')"    value="Github Help">
+            <input type="button" onclick="return toggleMe('collapseunix')"      value="Unix&#x00A;Commands">
+            <input type="button" onclick="return toggleMe('collapsenotes')"     value="Class Notes">
+        <!--/pre-->
+        </div>
+      </div>
+    </span>
   </div>
   
   <!--=========================================================-->
