@@ -108,6 +108,7 @@
 <!--JS=END======================================================-->
 <!-- Links -->
   <link rel="import" href="warning.html">
+  <link rel="import" href="collapsenotes.html">
   
 </head>
 
@@ -307,6 +308,32 @@ If the branches have already diverged, git will recursively backtrack until it h
 </collapse>
 <!--Github Help END===========================================================-->
 
+
+
+
+
+
+
+<script>
+    var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+
+    // Grab DOM from warning.html's document.
+    var el = content.querySelector('.collapsenotes');
+
+    document.body.appendChild(el.cloneNode(true));
+  </script>
+
+
+
+
+
+
+
+
+
+
+
 <!--Team info START===========================================================-->
 <collapse id="collapseteam">
 
@@ -484,18 +511,7 @@ If the branches have already diverged, git will recursively backtrack until it h
 </collapse>
 <!--Calendar END===========================================================-->
 
-<!--Calendar START===========================================================-->
-<collapse id="collapsenotes">
-    <h1>Class Notes</h1>
-    <a href="./cs320site/public_html/SEManagement/SENotes7.txt">Notes 7</a><br>
-    <a href="./cs320site/public_html/SEManagement/SENotes8.txt">Notes 8</a><br>
-    <a href="./cs320site/public_html/SEManagement/SENotes9.txt">Notes 9</a><br>
-    <a href="./cs320site/public_html/SEManagement/SENotes10.txt">Notes 10</a><br>
-    <a href="./cs320site/public_html/SEManagement/SENotes11.txt">Notes 11</a><br>
-    <a href="./cs320site/public_html/SEManagement/SENotes12.txt">Notes 12</a><br>
-    
-</collapse>
-<!--Calendar END===========================================================-->
+
 
 
 <!--Unix Commands=START=====================================================-->
