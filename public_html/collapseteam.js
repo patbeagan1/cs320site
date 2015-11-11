@@ -28,7 +28,7 @@ document.write('\
 <tr><td>\
         <table border=1>\
                 <tr>\
-        <td><strong>RED</strong></td>\
+        <td><strong style="color:red">RED</strong></td>\
         <td>Application<br>Mapping</td>\
         <td>Application<br>Data Entry</td>\
         <td>Tablet<br>Form Printing</td>\
@@ -52,7 +52,7 @@ document.write('\
   \
   <table border=1>\
                 <tr>\
-        <td><strong>ORANGE</strong></td>\
+        <td><strong style="color:orange">ORANGE</strong></td>\
         <td>Tablet<br>User Auth</td>\
         <td>Database<br>Basic</td>\
         <td>Database<br>Federation</td>\
@@ -77,7 +77,7 @@ document.write('\
 \
   <table border=1>\
                 <tr>\
-        <td><strong>BLUE</strong></td>\
+        <td><strong style="color:blue">BLUE</strong></td>\
         <td>Application<br>User Auth</td>\
         <td>Application<br>Recording and<br>Search</td>\
         <td>Tablet<br>GIS entry</td>\
@@ -102,7 +102,7 @@ document.write('\
 </td><td>\
     <table border=1>\
                 <tr>\
-        <td><strong>GREEN</strong></td>\
+        <td><strong style="color:green">GREEN</strong></td>\
         <td>Tablet<br>Data Entry</td>\
         <td>Tablet<br>Browsing</td>\
         <td>Tablet<br>Delayed Upload</td>\
